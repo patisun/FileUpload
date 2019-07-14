@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <title>验证码</title>
+    </head>
+
+    <body>
+        <form action="__URL__/verify_do" enctype="multipart/form-data" method="POST">
+            <input type="text" placeholder="请输入验证码" name="code" required height="42px">
+            <img src="{:U('verify_png')}" alt="" onclick="this.src='{:U("verify")}?'+Math.random()"  title="看不清，换一张" height="42px"> 
+            <button>登录</button>
+        </form>
+    </body>
+</html>
